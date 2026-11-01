@@ -1,4 +1,4 @@
-@font-face{font-family:"Open Sans";src:url(fonts/open-sans-latin-wght-normal.woff2) format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Open Sans";src:url(open-sans-latin-wght-normal.woff2) format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
 
 :root{
   --white:#fff; --cream:#F7F2E6; --cream-2:#EEE7D4; --sage:#87917B; --ink:#2E2A25; --grey:#6A6258; --brick:#98361F;

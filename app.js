@@ -106,7 +106,7 @@
   const reel = $('.reel');
   const scs = $$('.sc'), N = scs.length, bar = $('.reel__bar');
   let activeSc = -1;
-  // Pen-drawn icons (thesis, Palazzo Reale, Comm-Unify): a per-pixel timing map is baked into img/ic-*-draw.png
+  // Pen-drawn icons (thesis, Palazzo Reale, Comm-Unify): a per-pixel timing map is baked into ic-*-draw.png
   const pens = $$('.sc__draw').map(cv => {
     const o = { cv, g: cv.getContext('2d'), k: +cv.dataset.k, dur: +cv.dataset.dur || 1400, src: null, start: -1, last: -1 };
     const im = new Image();
@@ -255,10 +255,10 @@
   /* ---------- case explorer (thesis) ---------- */
   if ($('#xImg')) {
     const CASES = [
-      { img: 'img/sec-N.webp', red: null, hot: '9.7', roof: '2.49', wall: '0.97', win: '5.89', note: 'Semi-refurbished house: uninsulated sandstone walls, single glazing, wood-fueled “Sobia” stove.', label: 'Case N' },
-      { img: 'img/sec-low.webp', red: '47', hot: '11.2', roof: '0.67', wall: '0.76', win: '5.00', note: 'Draft-proofing, hemp-lime plaster, reversible roof insulation, new clear single glazing.', label: 'Low impact' },
-      { img: 'img/sec-mod.webp', red: '60', hot: '10.7', roof: '0.67', wall: '0.44', win: '1.60', note: 'Slim-line insulation, low-e double glazing, LED lighting, new heating system.', label: 'Moderate impact', key: true },
-      { img: 'img/sec-high.webp', red: '64', hot: '5.9', roof: '0.19', wall: '0.19', win: '0.60', note: 'Hypothetical: external insulation, stone cladding, triple glazing, radiant heating.', label: 'High impact' }
+      { img: 'sec-N.webp', red: null, hot: '9.7', roof: '2.49', wall: '0.97', win: '5.89', note: 'Semi-refurbished house: uninsulated sandstone walls, single glazing, wood-fueled “Sobia” stove.', label: 'Case N' },
+      { img: 'sec-low.webp', red: '47', hot: '11.2', roof: '0.67', wall: '0.76', win: '5.00', note: 'Draft-proofing, hemp-lime plaster, reversible roof insulation, new clear single glazing.', label: 'Low impact' },
+      { img: 'sec-mod.webp', red: '60', hot: '10.7', roof: '0.67', wall: '0.44', win: '1.60', note: 'Slim-line insulation, low-e double glazing, LED lighting, new heating system.', label: 'Moderate impact', key: true },
+      { img: 'sec-high.webp', red: '64', hot: '5.9', roof: '0.19', wall: '0.19', win: '0.60', note: 'Hypothetical: external insulation, stone cladding, triple glazing, radiant heating.', label: 'High impact' }
     ];
     const btns = $$('[role=tab]'), pill = $('.pill'), segEl = $('.seg');
     const img = $('#xImg'), n1 = $('#xRed'), n2 = $('#xHot'), l1 = $('#xRedL'), tag = $('#xTag'), numsEl = $('#xNums');
