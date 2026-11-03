@@ -63,7 +63,7 @@
     wa: $$('.w[data-set=a]'), wb: $$('.w[data-set=b]')
   };
   // Exploded-sketch units (px in the original drawing). Layers sit DYA above their place on the assembled house.
-  const DYA = [705, 456, 240, 0], SHIFT = -444, EXTRA = [-70, -45, -20, 12];
+  const DYA = [735, 470, 250, 0], SHIFT = -444, EXTRA = [-70, -45, -20, 12];
   // The facade of the elevation lands on the balcony face of the small house, the roof on its roof.
   const FACE = { tl: [115, 973], tr: [351, 1123], bl: [115, 1179] };           // balcony face, drawing px
   const SRC_BODY = { x0: 13.87, x1: 78.4, y0: 42.4, y1: 98.6 };                 // % of the elevation image
@@ -95,7 +95,7 @@
     H.ax.forEach((el, i) => {
       const dy = (DYA[i] * (1 - sep[i]) + EXTRA[i] * e) * K;
       el.style.transform = `translate3d(0,${dy.toFixed(1)}px,0) scale(${(i === 3 ? 1 + e * .05 : 1).toFixed(4)})`;
-      el.style.opacity = 1;
+      el.style.opacity = (i === 1 || i === 2 ? seg(sep[i], 0, .06) : 1).toFixed(3);
     });
     const so = eOut(seg(p, .62, .74));
     H.stat.style.opacity = so.toFixed(3); H.stat.style.transform = `translate3d(0,${(22 * (1 - so)).toFixed(1)}px,0)`;
